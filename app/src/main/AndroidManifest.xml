@@ -17,7 +17,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/BaseAppTheme">
+        android:theme="@style/AppThemeLight">
         <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -31,7 +31,6 @@
             android:name=".main.ui.activity.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/BaseAppTheme"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
         <activity android:name=".user.ui.activity.UserActivity">
         </activity>
@@ -52,6 +51,7 @@
         <meta-data
             android:name="com.weshow.live.config.GlobalConfiguration"
             android:value="ConfigModule"/>
+
     </application>
 
 </manifest>

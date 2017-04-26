@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.weshow.live.basemodule.widget.autolayout.AutoAppBarLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+<com.weshow.live.view.drawerlayout.FlowingDrawer
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/drawerlayout"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:clipChildren="false"
+android:clipToPadding="false"
+app:edPosition="1"
+app:edMenuSize="260dp"
+app:edMenuBackground="#dddddd">
 
-    tools:context="com.weshow.live.main.ui.activity.MainActivity">
+<!--content-->
+<include layout="@layout/include_list_viewpager"/>
 
-    <com.weshow.live.basemodule.widget.autolayout.AutoToolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
-
-    </com.weshow.live.basemodule.widget.autolayout.AutoToolbar>
-
-<android.support.v4.view.ViewPager
+<!--menu-->
+<com.weshow.live.view.drawerlayout.FlowingMenuLayout
+    android:id="@+id/menulayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-</android.support.v4.view.ViewPager>
 
-</com.weshow.live.basemodule.widget.autolayout.AutoAppBarLayout>
+    <include layout="@layout/ll_menu_layout"/>
+
+</com.weshow.live.view.drawerlayout.FlowingMenuLayout>
+
+</com.weshow.live.view.drawerlayout.FlowingDrawer>

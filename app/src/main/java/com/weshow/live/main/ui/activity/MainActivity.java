@@ -6,14 +6,14 @@ import android.view.View;
 import com.weshow.live.R;
 import com.weshow.live.basemodule.base.BaseActivity;
 import com.weshow.live.basemodule.di.component.AppComponent;
+import com.weshow.live.main.presenter.MainPresenter;
 
-public class MainActivity extends BaseActivity {
-
-
+public class MainActivity extends BaseActivity<MainPresenter> {
 
 
     @Override
     protected void setupActivityComponent(AppComponent appComponent) {
+
 
     }
 

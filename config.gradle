@@ -82,6 +82,8 @@ ext {
             "canary-debug"             : "com.squareup.leakcanary:leakcanary-android:${version["canarySdkVersion"]}",
             "canary-release"           : "com.squareup.leakcanary:leakcanary-android-no-op:${version["canarySdkVersion"]}",
             "umeng-analytics"          : "com.umeng.analytics:analytics:6.0.1",
+            "BRVAH"                    : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.13",
+            "MagicIndicator"           : "com.github.hackware1993:MagicIndicator:1.5.0"
     ]
 
 
