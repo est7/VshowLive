@@ -82,11 +82,14 @@ dependencies {
     releaseCompile rootProject.ext.dependencies["canary-release"]
     testCompile rootProject.ext.dependencies["canary-release"]
 
-    compile rootProject.ext.dependencies["BRVAH"]
+    //暂时不用
+    //compile rootProject.ext.dependencies["BRVAH"]
+
     compile rootProject.ext.dependencies["MagicIndicator"]
+    compile rootProject.ext.dependencies["XRecyclerView"]
 
 
-
+    compile 'com.android.support:support-v4:25.3.1'
 }
 repositories {
     mavenCentral()

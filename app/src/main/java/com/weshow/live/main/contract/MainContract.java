@@ -3,6 +3,8 @@ package com.weshow.live.main.contract;
 import com.weshow.live.basemodule.mvp.IModel;
 import com.weshow.live.basemodule.mvp.IView;
 
+import rx.Observable;
+
 /**
  * Created by Administrator.
  * <p>
@@ -15,8 +17,18 @@ import com.weshow.live.basemodule.mvp.IView;
 
 public class MainContract {
     public interface View extends IView {
+
+
+
     }
 
     public interface Model extends IModel {
+
+
+        Observable getAttentionList(long token, int id, int startindex, int endindex, boolean update);
+
+        Observable geRecommendtList(long token, int id, int startindex, int endindex, boolean update);
+
+        Observable geHotList(long token, int id, int startindex, int endindex, boolean update);
     }
 }

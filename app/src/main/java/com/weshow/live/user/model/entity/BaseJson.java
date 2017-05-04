@@ -1,6 +1,6 @@
 package com.weshow.live.user.model.entity;
 
-import com.weshow.live.user.model.api.Api;
+import com.weshow.live.config.api.Api;
 
 import java.io.Serializable;
 

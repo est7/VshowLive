@@ -3,6 +3,8 @@ package com.weshow.live.main.presenter;
 import com.weshow.live.basemodule.mvp.BasePresenter;
 import com.weshow.live.main.contract.MainContract;
 
+import javax.inject.Inject;
+
 /**
  * Created by Administrator.
  * <p>
@@ -15,5 +17,10 @@ import com.weshow.live.main.contract.MainContract;
 
 public class MainPresenter extends BasePresenter<MainContract.Model,MainContract.View> {
 
+    @Inject
+    public MainPresenter(MainContract.Model model, MainContract.View rootView) {
+        super(model, rootView);
 
+
+    }
 }

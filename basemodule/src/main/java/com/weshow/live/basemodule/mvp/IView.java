@@ -8,21 +8,6 @@ import android.content.Intent;
 public interface IView {
 
     /**
-     * 显示加载
-     */
-    void showLoading();
-
-    /**
-     * 隐藏加载
-     */
-    void hideLoading();
-
-    /**
-     * 显示信息
-     */
-    void showMessage(String message);
-
-    /**
      * 跳转activity
      */
     void launchActivity(Intent intent);

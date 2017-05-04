@@ -1,5 +1,6 @@
 package com.weshow.live.splash;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import com.weshow.live.basemodule.base.BaseActivity;
 import com.weshow.live.basemodule.di.component.AppComponent;
 import com.weshow.live.basemodule.utils.UiUtils;
 import com.weshow.live.main.ui.activity.MainActivity;
+import com.weshow.live.user.ui.activity.UserActivity;
 
 import butterknife.OnClick;
 
@@ -33,6 +35,12 @@ public class SplashActivity extends BaseActivity {
     @OnClick(R.id.splash_btn)
     public void goMainPage() {
         Intent intent = new Intent(this, MainActivity.class);
+        UiUtils.startActivity(intent);
+    }
+
+    @OnClick(R.id.user_btn)
+    public void goUserPage() {
+        Intent intent = new Intent(this, UserActivity.class);
         UiUtils.startActivity(intent);
     }
 }

@@ -10,9 +10,9 @@ import com.weshow.live.basemodule.http.RequestInterceptor;
 import com.weshow.live.basemodule.integration.ConfigModule;
 import com.weshow.live.basemodule.integration.IRepositoryManager;
 import com.weshow.live.basemodule.utils.UiUtils;
-import com.weshow.live.user.model.api.Api;
-import com.weshow.live.user.model.api.cache.CommonCache;
-import com.weshow.live.user.model.api.service.CommonService;
+import com.weshow.live.config.api.Api;
+import com.weshow.live.config.api.cache.CommonCache;
+import com.weshow.live.config.api.service.CommonService;
 import com.weshow.live.user.model.api.service.UserService;
 
 import org.json.JSONArray;

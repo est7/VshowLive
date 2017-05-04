@@ -67,6 +67,7 @@ public class ClientModule {
         OkHttpClient.Builder builder = okHttpClient
                 .connectTimeout(TIME_OUT, TimeUnit.SECONDS)
                 .readTimeout(TIME_OUT, TimeUnit.SECONDS)
+                .writeTimeout(TIME_OUT, TimeUnit.SECONDS)
                 .addInterceptor(chain -> chain.proceed(handler.onHttpRequestBefore(chain, chain.request())))
                 .addNetworkInterceptor(intercept);
         if (interceptors != null && interceptors.size() > 0) {//如果外部提供了interceptor的数组则遍历添加
@@ -139,7 +140,6 @@ public class ClientModule {
                 .responseErroListener(listener)
                 .build();
     }
-
 
 
 //    .addNetworkInterceptor(new Interceptor() {

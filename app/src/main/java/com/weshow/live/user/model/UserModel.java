@@ -4,8 +4,8 @@ package com.weshow.live.user.model;
 import com.weshow.live.basemodule.di.scope.ActivityScope;
 import com.weshow.live.basemodule.integration.IRepositoryManager;
 import com.weshow.live.basemodule.mvp.BaseModel;
+import com.weshow.live.config.api.cache.CommonCache;
 import com.weshow.live.user.contract.UserContract;
-import com.weshow.live.user.model.api.cache.CommonCache;
 import com.weshow.live.user.model.api.service.UserService;
 import com.weshow.live.user.model.entity.User;
 

@@ -17,6 +17,7 @@ public class UserModule {
 
     /**
      * 构建UserModule时,将View的实现类传进来,这样就可以提供View的实现类给presenter
+     *
      * @param view
      */
     public UserModule(UserContract.View view) {
@@ -25,13 +26,16 @@ public class UserModule {
 
     @ActivityScope
     @Provides
-    UserContract.View provideUserView(){
+    UserContract.View provideUserView() {
         return this.view;
     }
 
     @ActivityScope
     @Provides
-    UserContract.Model provideUserModel(UserModel model){
+    UserContract.Model provideUserModel(UserModel model) {
         return model;
     }
+
+
+
 }

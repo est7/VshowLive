@@ -1,4 +1,4 @@
-package com.weshow.live.user.model.api.service;
+package com.weshow.live.config.api.service;
 
 /**
  * 存放通用的一些API

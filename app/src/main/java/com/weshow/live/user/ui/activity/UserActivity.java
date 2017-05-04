@@ -37,6 +37,8 @@ public class UserActivity extends BaseActivity<UserPresenter> implements UserCon
 
     private Paginate mPaginate;
     private boolean isLoadingMore;
+
+
     private RxPermissions mRxPermissions;
 
     @Override

@@ -49,5 +49,6 @@ public interface AppComponent {
     //用于管理所有activity
     AppManager appManager();
 
+
     void inject(BaseApplication application);
 }

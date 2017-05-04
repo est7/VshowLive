@@ -4,6 +4,7 @@ package com.weshow.live.basemodule.utils;
 import com.trello.rxlifecycle.LifecycleTransformer;
 import com.weshow.live.basemodule.base.BaseActivity;
 import com.weshow.live.basemodule.base.BaseFragment;
+import com.weshow.live.basemodule.mvp.BaseView;
 import com.weshow.live.basemodule.mvp.IView;
 
 import rx.Observable;
@@ -18,7 +19,7 @@ import rx.schedulers.Schedulers;
 
 public class RxUtils {
 
-    public static <T> Observable.Transformer<T, T> applySchedulers(final IView view) {
+    public static <T> Observable.Transformer<T, T> applySchedulers(final BaseView view) {
         return new Observable.Transformer<T, T>() {
             @Override
             public Observable<T> call(Observable<T> observable) {

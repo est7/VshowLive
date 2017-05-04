@@ -17,15 +17,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-/**
- * 本项目由
- * mvp
- * +dagger2
- * +retrofit
- * +rxjava
- * +androideventbus
- * +butterknife组成
- */
 public abstract class BaseApplication extends Application {
     static private BaseApplication mApplication;
     private AppComponent mAppComponent;
