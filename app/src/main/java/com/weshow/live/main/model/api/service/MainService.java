@@ -1,8 +1,6 @@
 package com.weshow.live.main.model.api.service;
 
-import com.weshow.live.main.model.entity.HotList;
-
-import java.util.List;
+import com.weshow.live.bean.HotListBean;
 
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -19,7 +17,7 @@ import rx.Observable;
  */
 
 public interface MainService {
-    @GET("room!getRoomListForMobile")
-    Observable<List<HotList>> getHotList(@Query("numStart") int numStart, @Query("numOffset") int numOffset);
+    @GET("https://api.douban.com/v2/movie/top250")
+    Observable<HotListBean> getHotList(@Query("start") int numStart, @Query("count") int numOffset);
 
 }

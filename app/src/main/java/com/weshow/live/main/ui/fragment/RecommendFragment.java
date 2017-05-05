@@ -4,12 +4,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.weshow.live.R;
 import com.weshow.live.basemodule.base.BaseFragment;
 import com.weshow.live.basemodule.di.component.AppComponent;
 
+import butterknife.BindView;
+
 public class RecommendFragment extends BaseFragment {
 
+
+    @BindView(R.id.rev_recommend_content)
+    XRecyclerView mXRecyclerView;
     @Override
     protected void onFragmentVisibleChange(boolean isVisible) {
 /*
@@ -40,8 +46,6 @@ public class RecommendFragment extends BaseFragment {
     @Override
     protected void setupFragmentComponent(AppComponent appComponent) {
 
-
-
     }
 
     @Override
@@ -51,6 +55,6 @@ public class RecommendFragment extends BaseFragment {
 
     @Override
     protected void initData() {
-
+        //empty
     }
 }

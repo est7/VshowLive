@@ -15,6 +15,8 @@ import android.view.animation.DecelerateInterpolator;
 import com.weshow.live.R;
 import com.weshow.live.basemodule.base.BaseActivity;
 import com.weshow.live.basemodule.di.component.AppComponent;
+import com.weshow.live.di.component.DaggerMainComponent;
+import com.weshow.live.di.module.MainModule;
 import com.weshow.live.main.contract.MainContract;
 import com.weshow.live.main.presenter.MainPresenter;
 import com.weshow.live.main.ui.adapter.MainPagerAdapter;
@@ -34,7 +36,7 @@ import java.util.List;
 
 import butterknife.BindView;
 
-public class MainActivity extends BaseActivity<MainPresenter> implements MainContract.View{
+public class MainActivity extends BaseActivity<MainPresenter> implements MainContract.View {
 
 
     @BindView(R.id.vp_content)
@@ -51,9 +53,11 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
     @Override
     protected void setupActivityComponent(AppComponent appComponent) {
-
-
-
+        DaggerMainComponent.builder()
+                .appComponent(appComponent)
+                .mainModule(new MainModule(this))
+                .build()
+                .inject(this);
     }
 
 
@@ -118,6 +122,6 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
     @Override
     public void killMyself() {
-
+        finish();
     }
 }

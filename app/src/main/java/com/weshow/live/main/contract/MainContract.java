@@ -19,16 +19,15 @@ public class MainContract {
     public interface View extends IView {
 
 
-
     }
 
     public interface Model extends IModel {
 
 
-        Observable getAttentionList(long token, int id, int startindex, int endindex, boolean update);
+        Observable getAttentionList(int startindex, int countsize, boolean update);
 
-        Observable geRecommendtList(long token, int id, int startindex, int endindex, boolean update);
+        Observable geRecommendtList(int startindex, int countsize, boolean update);
 
-        Observable geHotList(long token, int id, int startindex, int endindex, boolean update);
+        Observable getHotList(int startindex, boolean update);
     }
 }

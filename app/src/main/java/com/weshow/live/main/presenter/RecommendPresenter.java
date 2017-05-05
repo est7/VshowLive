@@ -1,8 +1,8 @@
 package com.weshow.live.main.presenter;
 
 import com.weshow.live.basemodule.mvp.BasePresenter;
+import com.weshow.live.bean.HotListBean;
 import com.weshow.live.main.contract.RecommendContract;
-import com.weshow.live.main.model.entity.HotList;
 
 import javax.inject.Inject;
 
@@ -16,10 +16,11 @@ import javax.inject.Inject;
  * Content:
  */
 
-public class RecommendPresenter extends BasePresenter<RecommendContract.Model,RecommendContract.View<HotList>> {
+public class RecommendPresenter extends BasePresenter<RecommendContract.Model,RecommendContract.View<HotListBean>> {
 
     private final RecommendContract.Model mModel;
     private final RecommendContract.View mRootView;
+    private int startindex;
 
     @Inject
     public RecommendPresenter(RecommendContract.Model model, RecommendContract.View rootView) {
@@ -29,8 +30,12 @@ public class RecommendPresenter extends BasePresenter<RecommendContract.Model,Re
     }
 
 
-    /*public void requestRecommendList(token,) {
+    public void requestHotlist(boolean pullToRefresh) {
 
-        mModel.geRecommendtList(token,startindex,endindex,)
-    }*/
+        if (pullToRefresh) startindex = 0;
+
+        boolean isEvictCache = pullToRefresh;//是否驱逐缓存,为ture即不使用缓存,每次上拉刷新即需要最新数据,则不使用缓存
+
+        mModel.getHotList(startindex, isEvictCache);
+    }
 }

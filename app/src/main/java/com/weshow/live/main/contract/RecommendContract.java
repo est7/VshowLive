@@ -4,6 +4,7 @@ import android.support.annotation.UiThread;
 
 import com.weshow.live.basemodule.mvp.BaseView;
 import com.weshow.live.basemodule.mvp.IModel;
+import com.weshow.live.bean.HotListBean;
 
 import rx.Observable;
 
@@ -29,11 +30,10 @@ public interface RecommendContract {
         @UiThread
         public void showEmpty();
 
-
     }
 
     public interface Model extends IModel {
-        Observable geRecommendtList(long token, int id, int startindex, int endindex, boolean update);
+        Observable<HotListBean> getHotList(int startindex, boolean update);
     }
 
 }
