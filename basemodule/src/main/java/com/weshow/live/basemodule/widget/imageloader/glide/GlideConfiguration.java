@@ -19,9 +19,6 @@ import com.weshow.live.basemodule.utils.DataHelper;
 import java.io.File;
 import java.io.InputStream;
 
-/**
- * Created by jess on 16/4/15.
- */
 public class GlideConfiguration implements GlideModule {
     public static final int IMAGE_DISK_CACHE_MAX_SIZE = 100 * 1024 * 1024;//图片缓存文件最大值为100Mb
 

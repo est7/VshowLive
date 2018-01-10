@@ -13,6 +13,8 @@ import com.weshow.live.basemodule.utils.UiUtils;
 import com.weshow.live.config.api.Api;
 import com.weshow.live.config.api.cache.CommonCache;
 import com.weshow.live.config.api.service.CommonService;
+import com.weshow.live.main.model.api.cache.MainCache;
+import com.weshow.live.main.model.api.service.MainService;
 import com.weshow.live.user.model.api.service.UserService;
 
 import org.json.JSONArray;
@@ -90,7 +92,7 @@ public class GlobalConfiguration implements ConfigModule {
 
     @Override
     public void registerComponents(Context context, IRepositoryManager repositoryManager) {
-        repositoryManager.injectRetrofitService(CommonService.class, UserService.class);
-        repositoryManager.injectCacheService(CommonCache.class);
+        repositoryManager.injectRetrofitService(CommonService.class, UserService.class, MainService.class);
+        repositoryManager.injectCacheService(CommonCache.class, MainCache.class);
     }
 }

@@ -1,5 +1,8 @@
 package com.weshow.live.di.module;
 
+import android.app.Activity;
+
+import com.tbruyelle.rxpermissions.RxPermissions;
 import com.weshow.live.basemodule.di.scope.ActivityScope;
 import com.weshow.live.user.contract.UserContract;
 import com.weshow.live.user.model.UserModel;
@@ -34,6 +37,13 @@ public class UserModule {
     @Provides
     UserContract.Model provideUserModel(UserModel model) {
         return model;
+    }
+
+
+    @ActivityScope
+    @Provides
+    RxPermissions provideRxPermissions() {
+        return new RxPermissions((Activity) view);
     }
 
 

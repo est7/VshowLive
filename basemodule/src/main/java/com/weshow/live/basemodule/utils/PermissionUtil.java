@@ -9,11 +9,8 @@ import me.jessyan.rxerrorhandler.core.RxErrorHandler;
 import me.jessyan.rxerrorhandler.handler.ErrorHandleSubscriber;
 import timber.log.Timber;
 
-/**
- * Created by jess on 17/10/2016 10:09
- * Contact with jess.yan.effort@gmail.com
- */
 
+/*权限申请工具*/
 public class PermissionUtil {
     public static final String TAG = "Permission";
 

@@ -32,6 +32,7 @@ public class AppModule {
     @Provides
     public Gson provideGson(){return new Gson();}
 
+
     @Singleton
     @Provides
     public IRepositoryManager provideRepositoryManager(RepositoryManager repositoryManager) {

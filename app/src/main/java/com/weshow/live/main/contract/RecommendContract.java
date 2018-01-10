@@ -2,6 +2,7 @@ package com.weshow.live.main.contract;
 
 import android.support.annotation.UiThread;
 
+import com.weshow.live.basemodule.base.DefaultAdapter;
 import com.weshow.live.basemodule.mvp.BaseView;
 import com.weshow.live.basemodule.mvp.IModel;
 import com.weshow.live.bean.HotListBean;
@@ -21,14 +22,16 @@ import rx.Observable;
 public interface RecommendContract {
 
     public interface View<M> extends BaseView {
-        @UiThread
-        public void showContent(M data);
+
+        void setAdapter(DefaultAdapter adapter);
 
         @UiThread
         public void showError(Throwable e);
 
         @UiThread
         public void showEmpty();
+
+        void endloadMore();
 
     }
 

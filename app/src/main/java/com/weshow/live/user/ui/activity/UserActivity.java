@@ -20,6 +20,8 @@ import com.weshow.live.di.module.UserModule;
 import com.weshow.live.user.contract.UserContract;
 import com.weshow.live.user.presenter.UserPresenter;
 
+import javax.inject.Inject;
+
 import butterknife.BindView;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
@@ -38,12 +40,11 @@ public class UserActivity extends BaseActivity<UserPresenter> implements UserCon
     private Paginate mPaginate;
     private boolean isLoadingMore;
 
-
-    private RxPermissions mRxPermissions;
+    @Inject
+    protected RxPermissions mRxPermissions;
 
     @Override
     protected void setupActivityComponent(AppComponent appComponent) {
-        this.mRxPermissions = new RxPermissions(this);
         DaggerUserComponent
                 .builder()
                 .appComponent(appComponent)

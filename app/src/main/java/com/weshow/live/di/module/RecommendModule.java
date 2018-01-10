@@ -1,5 +1,7 @@
 package com.weshow.live.di.module;
 
+import android.content.Context;
+
 import com.weshow.live.basemodule.di.scope.FragmentScope;
 import com.weshow.live.main.contract.RecommendContract;
 import com.weshow.live.main.model.RecommendModel;
@@ -21,8 +23,12 @@ public class RecommendModule {
 
     private final RecommendContract.View mView;
 
-    public RecommendModule(RecommendContract.View view) {
+    private final Context mContext;
+
+
+    public RecommendModule(RecommendContract.View view, Context context) {
         mView = view;
+        mContext = context;
     }
 
     @FragmentScope
@@ -34,6 +40,13 @@ public class RecommendModule {
     @FragmentScope
     @Provides
     RecommendContract.Model provideRecommendModel(RecommendModel model) {
-    return model;
-}
+        return model;
+    }
+
+    @FragmentScope
+    @Provides
+    Context provideActivityContext() {
+        return mContext;
+    }
+
 }

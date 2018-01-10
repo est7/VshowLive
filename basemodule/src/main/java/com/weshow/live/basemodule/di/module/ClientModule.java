@@ -150,7 +150,6 @@ public class ClientModule {
 //                request = request.newBuilder()
 //                        .cacheControl(CacheControl.FORCE_CACHE)
 //                        .build();
-//                LogUtils.warnInfo("http","no network");
 //            }
 //            Response originalResponse = chain.proceed(request);
 //            if(DeviceUtils.netIsConnected(UiUtils.getContext())){

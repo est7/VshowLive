@@ -15,10 +15,6 @@ import io.rx_cache.DynamicKey;
 import io.rx_cache.EvictDynamicKey;
 import rx.Observable;
 
-/**
- * Created by jess on 9/4/16 10:56
- * Contact with jess.yan.effort@gmail.com
- */
 @FragmentScope
 public class RecommendModel extends BaseModel implements RecommendContract.Model {
     public static final int PAGE_SIZE = 20;

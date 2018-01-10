@@ -17,7 +17,8 @@ import rx.Observable;
  */
 
 public interface MainService {
-    @GET("https://api.douban.com/v2/movie/top250")
+    @GET("http://api.douban.com/v2/movie/top250")
     Observable<HotListBean> getHotList(@Query("start") int numStart, @Query("count") int numOffset);
+
 
 }

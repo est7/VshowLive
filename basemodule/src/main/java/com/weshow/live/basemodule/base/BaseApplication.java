@@ -24,7 +24,6 @@ public abstract class BaseApplication extends Application {
     protected ActivityLifecycle mActivityLifecycle;
     protected final String TAG = this.getClass().getSimpleName();
 
-
     @Override
     public void onCreate() {
         super.onCreate();

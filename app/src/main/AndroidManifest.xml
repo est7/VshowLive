@@ -52,6 +52,11 @@
             android:name="com.weshow.live.config.GlobalConfiguration"
             android:value="ConfigModule"/>
 
+        <activity
+            android:name=".BottomBavActivity"
+            android:label="@string/title_activity_bottom_bav"
+            android:theme="@style/AppThemeLight">
+        </activity>
     </application>
 
 </manifest>
